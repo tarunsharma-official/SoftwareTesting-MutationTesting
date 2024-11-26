@@ -15,5 +15,5 @@ Install Maven for doing Mutation Testing.
 7. View the mutation testing results in target/pit-reports/index.html.
 
 ## Contribution
-  Unit Testing done by Tarun Sharma.
+  Unit Testing done by Tarun Sharma. <br/>
   Integration Testing done by Farman Ahmed.
