@@ -13,3 +13,7 @@ Install Maven for doing Mutation Testing.
 5. Run the following command to perform Mutation Testing
 6.     mvn org.pitest:pitest-maven:mutationCoverage
 7. View the mutation testing results in target/pit-reports/index.html.
+
+## Contribution
+  Unit Testing done by Tarun Sharma.
+  Integration Testing done by Farman Ahmed.
