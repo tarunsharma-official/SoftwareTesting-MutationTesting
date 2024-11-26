@@ -4,7 +4,7 @@
 
 Install Maven for doing Mutation Testing.
 
-## PIT(Java)
+## Instructions
 
 1. Clone/Download the project
 2. Navigate to Code/Unit or Code/Integration 
