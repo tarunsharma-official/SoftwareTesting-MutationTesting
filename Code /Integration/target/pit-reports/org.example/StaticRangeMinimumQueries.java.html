@@ -1,0 +1,1838 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+
+
+<h1>StaticRangeMinimumQueries.java</h1>
+
+<table class="src">
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_1'/>
+1
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_1'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>package org.example;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_2'/>
+2
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_2'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_3'/>
+3
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_3'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.util.Arrays;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_4'/>
+4
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_4'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_5'/>
+5
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_5'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>public class StaticRangeMinimumQueries {</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_6'/>
+6
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_6'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private long[] seg; // Segment tree array</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_7'/>
+7
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_7'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private long[] arr; // Input array</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_8'/>
+8
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_8'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_9'/>
+9
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_9'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    public StaticRangeMinimumQueries(long[] input) {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_10'/>
+10
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_10'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        int n = input.length;</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_11'/>
+11
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_11'>1</a>
+<span>
+1. &#60;init&#62; : Removed assignment to member variable arr &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        this.arr = input;</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_12'/>
+12
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_12'>3</a>
+<span>
+1. &#60;init&#62; : Substituted 4 with 5 &rarr; SURVIVED<br/>
+2. &#60;init&#62; : Removed assignment to member variable seg &rarr; KILLED<br/>
+3. &#60;init&#62; : Replaced integer multiplication with division &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>        this.seg = new long[4 * n];</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_13'/>
+13
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_13'>2</a>
+<span>
+1. &#60;init&#62; : Substituted 9223372036854775807 with -9223372036854775808 &rarr; SURVIVED<br/>
+2. &#60;init&#62; : removed call to java/util/Arrays::fill &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>        Arrays.fill(seg, Long.MAX_VALUE); // Initialize segment tree with max value</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_14'/>
+14
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_14'>5</a>
+<span>
+1. &#60;init&#62; : Substituted 0 with 1 &rarr; KILLED<br/>
+2. &#60;init&#62; : Substituted 0 with 1 &rarr; KILLED<br/>
+3. &#60;init&#62; : Substituted 1 with 0 &rarr; KILLED<br/>
+4. &#60;init&#62; : removed call to org/example/StaticRangeMinimumQueries::build &rarr; KILLED<br/>
+5. &#60;init&#62; : Replaced integer subtraction with addition &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        build(0, 0, n - 1);</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_15'/>
+15
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_15'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_16'/>
+16
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_16'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_17'/>
+17
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_17'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    // Build the segment tree</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_18'/>
+18
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_18'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private void build(int i, int start, int end) {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_19'/>
+19
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_19'>3</a>
+<span>
+1. build : removed conditional - replaced equality check with true &rarr; KILLED<br/>
+2. build : negated conditional &rarr; KILLED<br/>
+3. build : removed conditional - replaced equality check with false &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (start == end) {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_20'/>
+20
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_20'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>            seg[i] = arr[start];</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_21'/>
+21
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_21'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>            return;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_22'/>
+22
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_22'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_23'/>
+23
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_23'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_24'/>
+24
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_24'>3</a>
+<span>
+1. build : Replaced Shift Right with Shift Left &rarr; KILLED<br/>
+2. build : Replaced integer addition with subtraction &rarr; KILLED<br/>
+3. build : Substituted 1 with 0 &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        int mid = (start + end) &#62;&#62; 1;</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_25'/>
+25
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_25'>5</a>
+<span>
+1. build : Replaced integer addition with subtraction &rarr; KILLED<br/>
+2. build : Substituted 1 with 0 &rarr; KILLED<br/>
+3. build : Replaced integer multiplication with division &rarr; KILLED<br/>
+4. build : removed call to org/example/StaticRangeMinimumQueries::build &rarr; KILLED<br/>
+5. build : Substituted 2 with 3 &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        build(2 * i + 1, start, mid);</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_26'/>
+26
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_26'>7</a>
+<span>
+1. build : Replaced integer multiplication with division &rarr; KILLED<br/>
+2. build : Substituted 2 with 3 &rarr; KILLED<br/>
+3. build : Substituted 2 with 3 &rarr; KILLED<br/>
+4. build : Replaced integer addition with subtraction &rarr; KILLED<br/>
+5. build : removed call to org/example/StaticRangeMinimumQueries::build &rarr; KILLED<br/>
+6. build : Replaced integer addition with subtraction &rarr; KILLED<br/>
+7. build : Substituted 1 with 0 &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        build(2 * i + 2, mid + 1, end);</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_27'/>
+27
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_27'>10</a>
+<span>
+1. build : Replaced integer multiplication with division &rarr; KILLED<br/>
+2. build : replaced call to java/lang/Math::min with argument &rarr; KILLED<br/>
+3. build : Substituted 2 with 3 &rarr; KILLED<br/>
+4. build : Substituted 1 with 0 &rarr; KILLED<br/>
+5. build : Replaced integer multiplication with division &rarr; KILLED<br/>
+6. build : removed call to java/lang/Math::min &rarr; KILLED<br/>
+7. build : Substituted 2 with 3 &rarr; KILLED<br/>
+8. build : Substituted 2 with 3 &rarr; KILLED<br/>
+9. build : Replaced integer addition with subtraction &rarr; KILLED<br/>
+10. build : Replaced integer addition with subtraction &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        seg[i] = Math.min(seg[2 * i + 1], seg[2 * i + 2]);</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_28'/>
+28
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_28'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_29'/>
+29
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_29'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_30'/>
+30
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_30'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    // Query the minimum in range [l, r]</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_31'/>
+31
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_31'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public long query(int l, int r) {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_32'/>
+32
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_32'>6</a>
+<span>
+1. query : Substituted 1 with 0 &rarr; KILLED<br/>
+2. query : Substituted 0 with 1 &rarr; KILLED<br/>
+3. query : replaced long return with 0 for org/example/StaticRangeMinimumQueries::query &rarr; KILLED<br/>
+4. query : Substituted 0 with 1 &rarr; KILLED<br/>
+5. query : Replaced integer subtraction with addition &rarr; KILLED<br/>
+6. query : removed call to org/example/StaticRangeMinimumQueries::query &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return query(0, l, r, 0, arr.length - 1);</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_33'/>
+33
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_33'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_34'/>
+34
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_34'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_35'/>
+35
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_35'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private long query(int i, int l, int r, int start, int end) {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_36'/>
+36
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_36'>8</a>
+<span>
+1. query : negated conditional &rarr; KILLED<br/>
+2. query : removed conditional - replaced comparison check with true &rarr; KILLED<br/>
+3. query : removed conditional - replaced comparison check with false &rarr; KILLED<br/>
+4. query : negated conditional &rarr; KILLED<br/>
+5. query : changed conditional boundary &rarr; KILLED<br/>
+6. query : removed conditional - replaced comparison check with true &rarr; KILLED<br/>
+7. query : removed conditional - replaced comparison check with false &rarr; KILLED<br/>
+8. query : changed conditional boundary &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (end &#60; l || r &#60; start) {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_37'/>
+37
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_37'>2</a>
+<span>
+1. query : Substituted 9223372036854775807 with -9223372036854775808 &rarr; KILLED<br/>
+2. query : replaced long return with 0 for org/example/StaticRangeMinimumQueries::query &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            return Long.MAX_VALUE; // No overlap</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_38'/>
+38
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_38'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_39'/>
+39
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_39'>8</a>
+<span>
+1. query : removed conditional - replaced comparison check with true &rarr; KILLED<br/>
+2. query : removed conditional - replaced comparison check with false &rarr; KILLED<br/>
+3. query : negated conditional &rarr; KILLED<br/>
+4. query : removed conditional - replaced comparison check with true &rarr; KILLED<br/>
+5. query : negated conditional &rarr; KILLED<br/>
+6. query : changed conditional boundary &rarr; KILLED<br/>
+7. query : removed conditional - replaced comparison check with false &rarr; KILLED<br/>
+8. query : changed conditional boundary &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (start &#62;= l &#38;&#38; end &#60;= r) {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_40'/>
+40
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_40'>1</a>
+<span>
+1. query : replaced long return with 0 for org/example/StaticRangeMinimumQueries::query &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            return seg[i]; // Total overlap</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_41'/>
+41
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_41'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_42'/>
+42
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_42'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_43'/>
+43
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_43'>3</a>
+<span>
+1. query : Substituted 1 with 0 &rarr; KILLED<br/>
+2. query : Replaced integer addition with subtraction &rarr; KILLED<br/>
+3. query : Replaced Shift Right with Shift Left &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        int mid = (start + end) &#62;&#62; 1;</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_44'/>
+44
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_44'>5</a>
+<span>
+1. query : Substituted 2 with 3 &rarr; KILLED<br/>
+2. query : removed call to org/example/StaticRangeMinimumQueries::query &rarr; KILLED<br/>
+3. query : Substituted 1 with 0 &rarr; KILLED<br/>
+4. query : Replaced integer multiplication with division &rarr; KILLED<br/>
+5. query : Replaced integer addition with subtraction &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        long left = query(2 * i + 1, l, r, start, mid);</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_45'/>
+45
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_45'>7</a>
+<span>
+1. query : Substituted 2 with 3 &rarr; KILLED<br/>
+2. query : Replaced integer multiplication with division &rarr; KILLED<br/>
+3. query : removed call to org/example/StaticRangeMinimumQueries::query &rarr; KILLED<br/>
+4. query : Replaced integer addition with subtraction &rarr; KILLED<br/>
+5. query : Replaced integer addition with subtraction &rarr; KILLED<br/>
+6. query : Substituted 1 with 0 &rarr; KILLED<br/>
+7. query : Substituted 2 with 3 &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        long right = query(2 * i + 2, l, r, mid + 1, end);</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_46'/>
+46
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_46'>3</a>
+<span>
+1. query : replaced long return with 0 for org/example/StaticRangeMinimumQueries::query &rarr; KILLED<br/>
+2. query : removed call to java/lang/Math::min &rarr; KILLED<br/>
+3. query : replaced call to java/lang/Math::min with argument &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return Math.min(left, right); // Partial overlap</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_47'/>
+47
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_47'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_48'/>
+48
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_48'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_49'/>
+49
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_49'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    // Update a value in the array and segment tree</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_50'/>
+50
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_50'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void update(int index, long value) {</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_51'/>
+51
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_51'>5</a>
+<span>
+1. update : Substituted 1 with 0 &rarr; NO_COVERAGE<br/>
+2. update : removed call to org/example/StaticRangeMinimumQueries::update &rarr; NO_COVERAGE<br/>
+3. update : Substituted 0 with 1 &rarr; NO_COVERAGE<br/>
+4. update : Replaced integer subtraction with addition &rarr; NO_COVERAGE<br/>
+5. update : Substituted 0 with 1 &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>        update(0, 0, arr.length - 1, index, value);</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_52'/>
+52
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_52'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>    }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_53'/>
+53
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_53'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_54'/>
+54
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_54'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private void update(int i, int start, int end, int index, long value) {</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_55'/>
+55
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_55'>3</a>
+<span>
+1. update : removed conditional - replaced equality check with false &rarr; NO_COVERAGE<br/>
+2. update : removed conditional - replaced equality check with true &rarr; NO_COVERAGE<br/>
+3. update : negated conditional &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>        if (start == end) {</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_56'/>
+56
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_56'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>            seg[i] = value;</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_57'/>
+57
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_57'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>            arr[start] = value;</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_58'/>
+58
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_58'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>            return;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_59'/>
+59
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_59'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_60'/>
+60
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_60'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_61'/>
+61
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_61'>3</a>
+<span>
+1. update : Replaced integer addition with subtraction &rarr; NO_COVERAGE<br/>
+2. update : Replaced Shift Right with Shift Left &rarr; NO_COVERAGE<br/>
+3. update : Substituted 1 with 0 &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>        int mid = (start + end) &#62;&#62; 1;</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_62'/>
+62
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_62'>4</a>
+<span>
+1. update : changed conditional boundary &rarr; NO_COVERAGE<br/>
+2. update : removed conditional - replaced comparison check with false &rarr; NO_COVERAGE<br/>
+3. update : removed conditional - replaced comparison check with true &rarr; NO_COVERAGE<br/>
+4. update : negated conditional &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>        if (index &#60;= mid) {</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_63'/>
+63
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_63'>5</a>
+<span>
+1. update : removed call to org/example/StaticRangeMinimumQueries::update &rarr; NO_COVERAGE<br/>
+2. update : Substituted 2 with 3 &rarr; NO_COVERAGE<br/>
+3. update : Substituted 1 with 0 &rarr; NO_COVERAGE<br/>
+4. update : Replaced integer multiplication with division &rarr; NO_COVERAGE<br/>
+5. update : Replaced integer addition with subtraction &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>            update(2 * i + 1, start, mid, index, value);</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_64'/>
+64
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_64'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        } else {</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_65'/>
+65
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_65'>7</a>
+<span>
+1. update : Substituted 2 with 3 &rarr; NO_COVERAGE<br/>
+2. update : removed call to org/example/StaticRangeMinimumQueries::update &rarr; NO_COVERAGE<br/>
+3. update : Replaced integer addition with subtraction &rarr; NO_COVERAGE<br/>
+4. update : Substituted 2 with 3 &rarr; NO_COVERAGE<br/>
+5. update : Replaced integer multiplication with division &rarr; NO_COVERAGE<br/>
+6. update : Replaced integer addition with subtraction &rarr; NO_COVERAGE<br/>
+7. update : Substituted 1 with 0 &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>            update(2 * i + 2, mid + 1, end, index, value);</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_66'/>
+66
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_66'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_67'/>
+67
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_67'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_68'/>
+68
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_68'>10</a>
+<span>
+1. update : replaced call to java/lang/Math::min with argument &rarr; NO_COVERAGE<br/>
+2. update : Replaced integer addition with subtraction &rarr; NO_COVERAGE<br/>
+3. update : Replaced integer addition with subtraction &rarr; NO_COVERAGE<br/>
+4. update : removed call to java/lang/Math::min &rarr; NO_COVERAGE<br/>
+5. update : Substituted 2 with 3 &rarr; NO_COVERAGE<br/>
+6. update : Substituted 2 with 3 &rarr; NO_COVERAGE<br/>
+7. update : Substituted 2 with 3 &rarr; NO_COVERAGE<br/>
+8. update : Substituted 1 with 0 &rarr; NO_COVERAGE<br/>
+9. update : Replaced integer multiplication with division &rarr; NO_COVERAGE<br/>
+10. update : Replaced integer multiplication with division &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>        seg[i] = Math.min(seg[2 * i + 1], seg[2 * i + 2]);</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_69'/>
+69
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_69'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>    }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_70'/>
+70
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_70'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_71'/>
+71
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_71'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public static void main(String[] args) {</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_72'/>
+72
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_72'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>//        Scanner scanner = new Scanner(System.in);</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_73'/>
+73
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_73'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>//        int n = scanner.nextInt();</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_74'/>
+74
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_74'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>//        int m = scanner.nextInt();</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_75'/>
+75
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_75'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>//        long[] arr = new long[n];</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_76'/>
+76
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_76'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>//        for (int i = 0; i &#60; n; i++) {</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_77'/>
+77
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_77'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>//            arr[i] = scanner.nextLong();</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_78'/>
+78
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_78'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>//        }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_79'/>
+79
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_79'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>//</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_80'/>
+80
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_80'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>//        StaticRangeMinimumQueries staticRangeMinimumQueries = new StaticRangeMinimumQueries(arr);</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_81'/>
+81
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_81'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>//</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_82'/>
+82
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_82'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>//        for (int i = 0; i &#60; m; i++) {</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_83'/>
+83
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_83'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>//            int l = scanner.nextInt() - 1; // Convert to 0-based index</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_84'/>
+84
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_84'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>//            int r = scanner.nextInt() - 1; // Convert to 0-based index</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_85'/>
+85
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_85'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>//            System.out.println(staticRangeMinimumQueries.query(l, r));</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_86'/>
+86
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_86'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>//        }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_87'/>
+87
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_87'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>//        scanner.close();</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_88'/>
+88
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_88'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>    }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5a7e81_89'/>
+89
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_89'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>}</span></pre></td></tr>
+
+
+
+<tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5a7e81_11'>11</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_11'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> Removed assignment to member variable arr &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5a7e81_12'>12</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_12'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>none</span></span> Substituted 4 with 5 &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.example.StaticRangeMinimumQueries,-method=<init>,-methodDesc=([J)V],-indexes=[18],-mutator=org.pitest.mutationtest.engine.gregor.mutators.InlineConstantMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.example.StaticRangeMinimumQueries,-method=<init>,-methodDesc=([J)V],-indexes=[18],-mutator=org.pitest.mutationtest.engine.gregor.mutators.InlineConstantMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.example.StaticRangeMinimumQueries,-method=<init>,-methodDesc=([J)V],-indexes=[18],-mutator=org.pitest.mutationtest.engine.gregor.mutators.InlineConstantMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</li> <li>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test2()]</li> 
+</ul>
+</div></div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> Removed assignment to member variable seg &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> Replaced integer multiplication with division &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5a7e81_13'>13</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_13'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>none</span></span> Substituted 9223372036854775807 with -9223372036854775808 &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.example.StaticRangeMinimumQueries,-method=<init>,-methodDesc=([J)V],-indexes=[27],-mutator=org.pitest.mutationtest.engine.gregor.mutators.InlineConstantMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.example.StaticRangeMinimumQueries,-method=<init>,-methodDesc=([J)V],-indexes=[27],-mutator=org.pitest.mutationtest.engine.gregor.mutators.InlineConstantMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.example.StaticRangeMinimumQueries,-method=<init>,-methodDesc=([J)V],-indexes=[27],-mutator=org.pitest.mutationtest.engine.gregor.mutators.InlineConstantMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</li> <li>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test2()]</li> 
+</ul>
+</div></div> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>none</span></span> removed call to java/util/Arrays::fill &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.example.StaticRangeMinimumQueries,-method=<init>,-methodDesc=([J)V],-indexes=[28],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.example.StaticRangeMinimumQueries,-method=<init>,-methodDesc=([J)V],-indexes=[28],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.example.StaticRangeMinimumQueries,-method=<init>,-methodDesc=([J)V],-indexes=[28],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</li> <li>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test2()]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5a7e81_14'>14</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_14'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> Substituted 0 with 1 &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> Substituted 0 with 1 &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> Substituted 1 with 0 &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> removed call to org/example/StaticRangeMinimumQueries::build &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> Replaced integer subtraction with addition &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5a7e81_19'>19</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_19'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>build<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> removed conditional - replaced equality check with true &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>build<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> negated conditional &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>build<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> removed conditional - replaced equality check with false &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5a7e81_24'>24</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_24'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>build<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> Replaced Shift Right with Shift Left &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>build<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> Replaced integer addition with subtraction &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>build<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> Substituted 1 with 0 &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5a7e81_25'>25</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_25'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>build<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> Replaced integer addition with subtraction &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>build<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> Substituted 1 with 0 &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>build<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> Replaced integer multiplication with division &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>build<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> removed call to org/example/StaticRangeMinimumQueries::build &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>build<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> Substituted 2 with 3 &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5a7e81_26'>26</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_26'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>build<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> Replaced integer multiplication with division &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>build<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> Substituted 2 with 3 &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>build<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> Substituted 2 with 3 &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>build<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> Replaced integer addition with subtraction &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>build<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> removed call to org/example/StaticRangeMinimumQueries::build &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>6.<span><b>6</b><br/><b>Location : </b>build<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> Replaced integer addition with subtraction &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>7.<span><b>7</b><br/><b>Location : </b>build<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> Substituted 1 with 0 &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5a7e81_27'>27</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_27'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>build<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> Replaced integer multiplication with division &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>build<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> replaced call to java/lang/Math::min with argument &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>build<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> Substituted 2 with 3 &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>build<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> Substituted 1 with 0 &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>build<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> Replaced integer multiplication with division &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>6.<span><b>6</b><br/><b>Location : </b>build<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> removed call to java/lang/Math::min &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>7.<span><b>7</b><br/><b>Location : </b>build<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> Substituted 2 with 3 &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>8.<span><b>8</b><br/><b>Location : </b>build<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> Substituted 2 with 3 &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>9.<span><b>9</b><br/><b>Location : </b>build<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> Replaced integer addition with subtraction &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>10.<span><b>10</b><br/><b>Location : </b>build<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> Replaced integer addition with subtraction &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5a7e81_32'>32</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_32'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>query<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> Substituted 1 with 0 &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>query<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> Substituted 0 with 1 &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>query<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> replaced long return with 0 for org/example/StaticRangeMinimumQueries::query &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>query<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> Substituted 0 with 1 &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>query<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> Replaced integer subtraction with addition &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>6.<span><b>6</b><br/><b>Location : </b>query<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> removed call to org/example/StaticRangeMinimumQueries::query &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5a7e81_36'>36</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_36'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>query<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> negated conditional &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>query<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> removed conditional - replaced comparison check with true &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>query<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> removed conditional - replaced comparison check with false &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>query<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> negated conditional &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>query<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> changed conditional boundary &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>6.<span><b>6</b><br/><b>Location : </b>query<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> removed conditional - replaced comparison check with true &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>7.<span><b>7</b><br/><b>Location : </b>query<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> removed conditional - replaced comparison check with false &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>8.<span><b>8</b><br/><b>Location : </b>query<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> changed conditional boundary &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5a7e81_37'>37</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_37'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>query<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> Substituted 9223372036854775807 with -9223372036854775808 &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>query<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> replaced long return with 0 for org/example/StaticRangeMinimumQueries::query &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5a7e81_39'>39</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_39'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>query<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> removed conditional - replaced comparison check with true &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>query<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> removed conditional - replaced comparison check with false &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>query<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> negated conditional &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>query<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> removed conditional - replaced comparison check with true &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>query<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> negated conditional &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>6.<span><b>6</b><br/><b>Location : </b>query<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> changed conditional boundary &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>7.<span><b>7</b><br/><b>Location : </b>query<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> removed conditional - replaced comparison check with false &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>8.<span><b>8</b><br/><b>Location : </b>query<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> changed conditional boundary &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5a7e81_40'>40</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_40'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>query<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> replaced long return with 0 for org/example/StaticRangeMinimumQueries::query &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5a7e81_43'>43</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_43'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>query<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> Substituted 1 with 0 &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>query<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> Replaced integer addition with subtraction &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>query<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> Replaced Shift Right with Shift Left &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5a7e81_44'>44</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_44'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>query<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> Substituted 2 with 3 &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>query<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> removed call to org/example/StaticRangeMinimumQueries::query &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>query<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> Substituted 1 with 0 &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>query<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> Replaced integer multiplication with division &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>query<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> Replaced integer addition with subtraction &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5a7e81_45'>45</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_45'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>query<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> Substituted 2 with 3 &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>query<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> Replaced integer multiplication with division &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>query<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> removed call to org/example/StaticRangeMinimumQueries::query &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>query<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> Replaced integer addition with subtraction &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>query<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> Replaced integer addition with subtraction &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>6.<span><b>6</b><br/><b>Location : </b>query<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> Substituted 1 with 0 &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>7.<span><b>7</b><br/><b>Location : </b>query<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> Substituted 2 with 3 &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5a7e81_46'>46</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_46'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>query<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> replaced long return with 0 for org/example/StaticRangeMinimumQueries::query &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>query<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> removed call to java/lang/Math::min &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>query<br/><b>Killed by : </b>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()]</span></span> replaced call to java/lang/Math::min with argument &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5a7e81_51'>51</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_51'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>update<br/><b>Killed by : </b>none</span></span> Substituted 1 with 0 &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>update<br/><b>Killed by : </b>none</span></span> removed call to org/example/StaticRangeMinimumQueries::update &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>update<br/><b>Killed by : </b>none</span></span> Substituted 0 with 1 &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>update<br/><b>Killed by : </b>none</span></span> Replaced integer subtraction with addition &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>update<br/><b>Killed by : </b>none</span></span> Substituted 0 with 1 &rarr; NO_COVERAGE</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5a7e81_55'>55</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_55'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>update<br/><b>Killed by : </b>none</span></span> removed conditional - replaced equality check with false &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>update<br/><b>Killed by : </b>none</span></span> removed conditional - replaced equality check with true &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>update<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; NO_COVERAGE</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5a7e81_61'>61</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_61'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>update<br/><b>Killed by : </b>none</span></span> Replaced integer addition with subtraction &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>update<br/><b>Killed by : </b>none</span></span> Replaced Shift Right with Shift Left &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>update<br/><b>Killed by : </b>none</span></span> Substituted 1 with 0 &rarr; NO_COVERAGE</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5a7e81_62'>62</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_62'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>update<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>update<br/><b>Killed by : </b>none</span></span> removed conditional - replaced comparison check with false &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>update<br/><b>Killed by : </b>none</span></span> removed conditional - replaced comparison check with true &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>update<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; NO_COVERAGE</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5a7e81_63'>63</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_63'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>update<br/><b>Killed by : </b>none</span></span> removed call to org/example/StaticRangeMinimumQueries::update &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>update<br/><b>Killed by : </b>none</span></span> Substituted 2 with 3 &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>update<br/><b>Killed by : </b>none</span></span> Substituted 1 with 0 &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>update<br/><b>Killed by : </b>none</span></span> Replaced integer multiplication with division &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>update<br/><b>Killed by : </b>none</span></span> Replaced integer addition with subtraction &rarr; NO_COVERAGE</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5a7e81_65'>65</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_65'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>update<br/><b>Killed by : </b>none</span></span> Substituted 2 with 3 &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>update<br/><b>Killed by : </b>none</span></span> removed call to org/example/StaticRangeMinimumQueries::update &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>update<br/><b>Killed by : </b>none</span></span> Replaced integer addition with subtraction &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>update<br/><b>Killed by : </b>none</span></span> Substituted 2 with 3 &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>update<br/><b>Killed by : </b>none</span></span> Replaced integer multiplication with division &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>6.<span><b>6</b><br/><b>Location : </b>update<br/><b>Killed by : </b>none</span></span> Replaced integer addition with subtraction &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>7.<span><b>7</b><br/><b>Location : </b>update<br/><b>Killed by : </b>none</span></span> Substituted 1 with 0 &rarr; NO_COVERAGE</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5a7e81_68'>68</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5a7e81_68'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>update<br/><b>Killed by : </b>none</span></span> replaced call to java/lang/Math::min with argument &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>update<br/><b>Killed by : </b>none</span></span> Replaced integer addition with subtraction &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>update<br/><b>Killed by : </b>none</span></span> Replaced integer addition with subtraction &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>update<br/><b>Killed by : </b>none</span></span> removed call to java/lang/Math::min &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>update<br/><b>Killed by : </b>none</span></span> Substituted 2 with 3 &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>6.<span><b>6</b><br/><b>Location : </b>update<br/><b>Killed by : </b>none</span></span> Substituted 2 with 3 &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>7.<span><b>7</b><br/><b>Location : </b>update<br/><b>Killed by : </b>none</span></span> Substituted 2 with 3 &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>8.<span><b>8</b><br/><b>Location : </b>update<br/><b>Killed by : </b>none</span></span> Substituted 1 with 0 &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>9.<span><b>9</b><br/><b>Location : </b>update<br/><b>Killed by : </b>none</span></span> Replaced integer multiplication with division &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>10.<span><b>10</b><br/><b>Location : </b>update<br/><b>Killed by : </b>none</span></span> Replaced integer multiplication with division &rarr; NO_COVERAGE</span>
+</div> 
+</td>
+</tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+<li class='mutator'>CONDITIONALS_BOUNDARY</li>
+<li class='mutator'>CONSTRUCTOR_CALLS</li>
+<li class='mutator'>EMPTY_RETURNS</li>
+<li class='mutator'>EXPERIMENTAL_ARGUMENT_PROPAGATION</li>
+<li class='mutator'>EXPERIMENTAL_BIG_DECIMAL</li>
+<li class='mutator'>EXPERIMENTAL_BIG_INTEGER</li>
+<li class='mutator'>EXPERIMENTAL_MEMBER_VARIABLE</li>
+<li class='mutator'>EXPERIMENTAL_NAKED_RECEIVER</li>
+<li class='mutator'>EXPERIMENTAL_REMOVE_SWITCH_MUTATOR_[0-99]</li>
+<li class='mutator'>EXPERIMENTAL_SWITCH</li>
+<li class='mutator'>FALSE_RETURNS</li>
+<li class='mutator'>INCREMENTS</li>
+<li class='mutator'>INLINE_CONSTS</li>
+<li class='mutator'>INVERT_NEGS</li>
+<li class='mutator'>MATH</li>
+<li class='mutator'>NEGATE_CONDITIONALS</li>
+<li class='mutator'>NON_VOID_METHOD_CALLS</li>
+<li class='mutator'>NULL_RETURNS</li>
+<li class='mutator'>PRIMITIVE_RETURNS</li>
+<li class='mutator'>REMOVE_CONDITIONALS_EQUAL_ELSE</li>
+<li class='mutator'>REMOVE_CONDITIONALS_EQUAL_IF</li>
+<li class='mutator'>REMOVE_CONDITIONALS_ORDER_ELSE</li>
+<li class='mutator'>REMOVE_CONDITIONALS_ORDER_IF</li>
+<li class='mutator'>REMOVE_INCREMENTS</li>
+<li class='mutator'>TRUE_RETURNS</li>
+<li class='mutator'>VOID_METHOD_CALLS</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+<li>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test1()] (8 ms)</li><li>org.example.StaticRangeMinimumQueriesTest.[engine:junit-jupiter]/[class:org.example.StaticRangeMinimumQueriesTest]/[method:test2()] (3 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='https://pitest.org'>PIT</a> 1.17.1
+
+</body>
+</html>
